@@ -85,7 +85,7 @@ Modificar el archivo barcelona.html para que contenga el siguiente código:
 
 Para obtener el Map ID del tileset seleccionar la pestaña **Tilesets** y presionar el botón *Menu* de la capa de stations. Copiar el **Map ID**.
 
-Remplazar donde dice *MAP ID DEL TILESET* por el id copiado. Ejemplo de identificador *bolollo.cjmtjlsp30e2232lk64u3a3zm-5dzl6*
+Remplazar donde dice *MAP ID DEL TILESET* por el id copiado. Ejemplo de identificador *mapbox://bolollo.cjmtjlsp30e2232lk64u3a3zm-5dzl6*
 
 Recargar la página del mapa y se deben ver los puntos de las estaciones de Bicing en el mapa.
 
