@@ -312,6 +312,26 @@
     Crear un estilo simple
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-la-capa-de-datos" title="Agregar la capa de datos" class="md-nav__link">
+    Agregar la capa de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizar-el-estilo" title="Visualizar el estilo" class="md-nav__link">
+    Visualizar el estilo
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -324,13 +344,6 @@
         <li class="md-nav__item">
   <a href="#estilo-por-nivel-de-zoom" title="Estilo por nivel de zoom" class="md-nav__link">
     Estilo por nivel de zoom
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizar-los-estilos" title="Visualizar los estilos" class="md-nav__link">
-    Visualizar los estilos
   </a>
   
 </li>
@@ -395,6 +408,26 @@
     Crear un estilo simple
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-la-capa-de-datos" title="Agregar la capa de datos" class="md-nav__link">
+    Agregar la capa de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizar-el-estilo" title="Visualizar el estilo" class="md-nav__link">
+    Visualizar el estilo
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -407,13 +440,6 @@
         <li class="md-nav__item">
   <a href="#estilo-por-nivel-de-zoom" title="Estilo por nivel de zoom" class="md-nav__link">
     Estilo por nivel de zoom
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizar-los-estilos" title="Visualizar los estilos" class="md-nav__link">
-    Visualizar los estilos
   </a>
   
 </li>
@@ -438,10 +464,132 @@
                 
                 
                 <h1 id="como-simbolizarlas-mapbox-studio">Cómo simbolizarlas (mapbox studio)</h1>
+<p>Para dar estilo a las Teselas Vectoriales utilizando la librería de Mapbox GL hay que seguir la especificación de estilo de Mapbox <a href="https://www.mapbox.com/mapbox-gl-js/style-spec">https://www.mapbox.com/mapbox-gl-js/style-spec</a>. La definición del estilo se describe en un JSON.</p>
+<p>Para facilitar la creación del JSON de estilo Mapbox ha creado el Mapbox Studio que permite crear un estilo fácilmente de forma visual.</p>
 <h2 id="crear-un-estilo-simple">Crear un estilo simple</h2>
+<p>Para crear un estilo hay que seleccionar la pestaña <strong>Styles</strong> dentro del Mapbox Studio.</p>
+<p>Se puede crear un estilo desde cero o se puede utilizar algún template de los que ofrece Mapbox.</p>
+<p>Seleccionar la opción de <strong>More options</strong> <em>Pick a template or upload a style</em>. En la ventana que se muestra presionar el botón <em>Create</em> del estilo <strong>Dark</strong></p>
+<p><img alt="Template estilo dark" src="../img/dark_mapbox.png" />
+Template estilo dark</p>
+<h3 id="agregar-la-capa-de-datos">Agregar la capa de datos</h3>
+<p>El template seleccionado ya tiene una serie de capas que sirven como capas base o capas de referencia. La vista inicial está centrada en Boston así que lo primero que tenemos que hacer es navegar por el mapa y centrar la vista en Barcelona.</p>
+<p>Para agregar una capa nueva presionar el botón <strong>+ Add layer</strong>.</p>
+<p>En la ventana que se despliega seleccionar la fuente de datos (<em>Source</em>) de <strong>carril_bici</strong>.</p>
+<p>Para dar estilo a la capa seleccionar la pestaña de <em>Style</em>.</p>
+<p>Cambiar el color por defecto (negro) por un color que resalte sobre el mapa. Por ejemplo un magenta (#c753ee).</p>
+<p>Cambiar la propiedad ancho (<em>Width</em>) de la línea a 2px.</p>
+<p>Una vez definido el estilo presionar el botón <strong>Publish</strong>. Aparece una ventana que permite compara la versión previa publicada con la nueva versión de nuestro estilo. Al presionar el botón <strong>Publish</strong> aparece una nueva ventana que contiene 2 pestañas:</p>
+<ul>
+<li>
+<p><strong>Share:</strong> indica la url de nuestro estilo.</p>
+</li>
+<li>
+<p><strong>Use:</strong> muestra varias opciones de código para usar en diferentes plataformas. En nuestro caso nos interesa la opción <em>Web</em>.</p>
+</li>
+</ul>
+<p>En la opción Web aparte del ejemplo de código para usar en una página web se muestra nuestro <strong>access token</strong> y la URL del estilo.</p>
+<p><img alt="Datos estilo carril bici" src="../img/estilo_carril.png" />
+Datos estilo carril bici</p>
+<h2 id="visualizar-el-estilo">Visualizar el estilo</h2>
+<p>Modificar el archivo barcelona.html para que muestre nuestro estilo. El archivo contendrá el siguiente código:</p>
+<p>Actualizar el <em>access token</em> y la url del estilo</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mapa VT<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;https://mapbox-gl-inspect.lukasmartinelli.ch/dist/mapbox-gl-inspect.css&#39;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#39;stylesheet&#39;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://mapbox-gl-inspect.lukasmartinelli.ch/dist/mapbox-gl-inspect.min.js&#39;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;map&#39;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="hll">    <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">&#39;pk.eyJ1IjoiYm9sb2xsbyIsImEiOiI3MDlqRnJJIn0.m-zCTI_UaEOCiCakGUDwcw&#39;</span><span class="p">;</span>
+</span>    <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+        <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="c1">// id del elemento HTML que contendrá el mapa</span>
+<span class="hll">        <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;mapbox://styles/bolollo/cjmutm5tmb0ji2rlc3ushd4ug&#39;</span><span class="p">,</span> <span class="c1">// Ubicación del estilo</span>
+</span>        <span class="nx">center</span><span class="o">:</span> <span class="p">[</span><span class="mf">2.175</span><span class="p">,</span> <span class="mf">41.39</span><span class="p">],</span> <span class="c1">// Ubicación inicial</span>
+        <span class="nx">zoom</span><span class="o">:</span> <span class="mi">13</span><span class="p">,</span> <span class="c1">// Zoom inicial</span>
+        <span class="nx">bearing</span><span class="o">:</span> <span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="c1">// Ángulo de rotación inicial</span>
+        <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// Permite ir guardando la posición del mapa en la URL</span>
+    <span class="p">});</span>
+
+    <span class="c1">// Agrega controles de navegación (zoom, rotación) al mapa:</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">());</span>
+    <span class="c1">// Agregar el control de inspección</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="k">new</span> <span class="nx">MapboxInspect</span><span class="p">());</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Recargar la página del mapa y se deben ver los carriles bici en el mapa.</p>
+<p><img alt="Estilo carril bici" src="../img/bcn_carril_bici.png" />
+Estilo carril bici</p>
 <h2 id="estilo-por-rango-de-valores">Estilo por rango de valores</h2>
+<p>Cargar la capa de estaciones de bicing (<strong>stations</strong>) en el estilo.</p>
+<p>En la propiedad de <em>Radius</em> seleccionar la opción <strong>Style across data range</strong>. Se despliega una ventana con los atributos de tipo númerico de la capa. Seleccionar el atributo <strong>slots</strong> (que representa la capacidad de bicicletas de la estación de bicing). Se muestra una ventana con 2 opciones de estilo una para el valor mínimo del campo y otra para el máximo. Si se quiere se pueden agregar más rangos de valores. Seleccionar la opción del valor máximo (slots 33) y cambiar el valor de <em>Circle radius</em> por 15px. Presionar el botón de <em>Done</em>. Vemos que el tamaño de los circulos que representan las estaciones de bicing varián dependiendo de la capacidad de la estación.</p>
+<p>En la propiedad de <em>Color</em> seleccionar la opción <strong>Style across data range</strong>. En este caso seleccionar el atributo <strong>bikes</strong> (que representa el número de bicicletas disponibles en la estación). Para la primera opcíon (que serían las estaciones con 0 bicis disponibles) seleccionar un color rojo (#f91a1a). Para la segunda opción (bikes 37) seleccionar un color verde (#7cfa52). Presionar el botón de <em>Done</em>. Vemos que el color de los circulos que representan las estaciones de bicing varián dependiendo de la disponibilidad de bicis de la estación.</p>
+<p>Presionamos el botón <strong>Publish</strong> para publicar los cambios. Vemos que la URL del estilo se mantiene, así que no tenemos que modificar nada en nuestra página.</p>
+<p>Recargar la página del mapa y se deben ver los carriles bici y las estaciones en el mapa.</p>
+<p><img alt="Estilo carril bici + estaciones" src="../img/bcn_carril_estaciones.png" />
+Estilo carril bici + estaciones</p>
 <h2 id="estilo-por-nivel-de-zoom">Estilo por nivel de zoom</h2>
-<h2 id="visualizar-los-estilos">Visualizar los estilos</h2>
+<p>Cargar la capa de puntos de anclaje de bicicletas (<strong>punts_ancoratge_bicicletes</strong>) en el estilo. Cambiar el tipo de capa (<em>Type</em>) de Circle a Symbol. Esto nos permitirá simbolizar la capa con un icono o una etiqueta. Cambiar la visibilidad de la capa (<em>Zoom extent</em>) a Min = 11 y Max = 22. </p>
+<p>En la propiedad <em>Text field</em> en lugar de seleccionar un atributo de la capa escribir <strong>PB</strong></p>
+<p>En la propiedad <em>Color</em> seleccionar un amarillo (#f3ca16)</p>
+<p>En la propiedad <em>Size</em> seleccionar la opción <strong>Style across zoom range</strong>. Se muestra una ventana con 2 opciones de estilo una para el valor mínimo del zoom del mapa y otra para el máximo. Para primera opción cambiamos el valor de zoom a 11 y el <em>Text size</em> a 5px. Para la segunda opción <em>Zoom 22</em> cambiar el <em>Text size</em> a 22px. Presionar el botón de <em>Done</em>. Si hacemos zoom en el mapa vemos que el tamaño de la letra varía según el nivel de zoom. Mientras más nos acercamos más grande es la letra.</p>
+<p>Presionamos el botón <strong>Publish</strong> para publicar los cambios. Vemos que la URL del estilo se mantiene, así que no tenemos que modificar nada en nuestra página.</p>
+<p>Recargar la página del mapa y se deben ver los carriles bici, las estaciones en el mapa y los puntos de anclaje.</p>
+<p><img alt="Estilo carril bici + estaciones + anclajes" src="../img/bcn_total.png" />
+Estilo carril bici + estaciones + anclajes</p>
                 
                   
                 
