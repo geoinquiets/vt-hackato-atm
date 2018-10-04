@@ -2,7 +2,7 @@
 
 Para dar estilo a las Teselas Vectoriales utilizando la librería de Mapbox GL hay que seguir la especificación de estilo de Mapbox <https://www.mapbox.com/mapbox-gl-js/style-spec>. La definición del estilo se describe en un JSON.
 
-Para facilitar la creación del JSON de estilo Mapbox ha creado el Mapbox Studio que permite crear un estilo fácilmente de forma visual.
+Para facilitar la creación del JSON de estilo, Mapbox ha creado el Mapbox Studio que permite crear un estilo fácilmente de forma visual.
 
 ## Crear un estilo simple
 
@@ -29,7 +29,7 @@ Cambiar el color por defecto (negro) por un color que resalte sobre el mapa. Por
 
 Cambiar la propiedad ancho (*Width*) de la línea a 2px.
 
-Una vez definido el estilo presionar el botón **Publish**. Aparece una ventana que permite compara la versión previa publicada con la nueva versión de nuestro estilo. Al presionar el botón **Publish** aparece una nueva ventana que contiene 2 pestañas:
+Una vez definido el estilo presionar el botón **Publish**. Aparece una ventana que permite comparar la versión previa publicada con la nueva versión de nuestro estilo. Al presionar el botón **Publish** aparece una nueva ventana que contiene 2 pestañas:
 
 * **Share:** indica la url de nuestro estilo.
 
@@ -95,13 +95,13 @@ Estilo carril bici
 
 Cargar la capa de estaciones de bicing (**stations**) en el estilo.
 
-En la propiedad de *Radius* seleccionar la opción **Style across data range**. Se despliega una ventana con los atributos de tipo númerico de la capa. Seleccionar el atributo **slots** (que representa la capacidad de bicicletas de la estación de bicing). Se muestra una ventana con 2 opciones de estilo una para el valor mínimo del campo y otra para el máximo. Si se quiere se pueden agregar más rangos de valores. Seleccionar la opción del valor máximo (slots 33) y cambiar el valor de *Circle radius* por 15px. Presionar el botón de *Done*. Vemos que el tamaño de los circulos que representan las estaciones de bicing varián dependiendo de la capacidad de la estación.
+En la propiedad de *Radius* seleccionar la opción **Style across data range**. Se despliega una ventana con los atributos de tipo numérico de la capa. Seleccionar el atributo **slots** (que representa la capacidad de bicicletas de la estación de bicing). Se muestra una ventana con 2 opciones de estilo una para el valor mínimo del campo y otra para el máximo. Si se desea, se pueden agregar más rangos de valores. Seleccionar la opción del valor máximo (slots 33) y cambiar el valor de *Circle radius* por 15px. Presionar el botón de *Done*. Vemos que el tamaño de los circulos que representan las estaciones de bicing varian dependiendo de la capacidad de la estación.
 
-En la propiedad de *Color* seleccionar la opción **Style across data range**. En este caso seleccionar el atributo **bikes** (que representa el número de bicicletas disponibles en la estación). Para la primera opcíon (que serían las estaciones con 0 bicis disponibles) seleccionar un color rojo (#f91a1a). Para la segunda opción (bikes 37) seleccionar un color verde (#7cfa52). Presionar el botón de *Done*. Vemos que el color de los circulos que representan las estaciones de bicing varián dependiendo de la disponibilidad de bicis de la estación.
+En la propiedad de *Color* seleccionar la opción **Style across data range**. En este caso seleccionar el atributo **bikes** (que representa el número de bicicletas disponibles en la estación). Para la primera opción (que serían las estaciones con 0 bicis disponibles) seleccionar un color rojo (#f91a1a). Para la segunda opción (bikes 37) seleccionar un color verde (#7cfa52). Presionar el botón de *Done*. Vemos que el color de los circulos que representan las estaciones de bicing varia dependiendo de la disponibilidad de bicis de la estación.
 
 Presionamos el botón **Publish** para publicar los cambios. Vemos que la URL del estilo se mantiene, así que no tenemos que modificar nada en nuestra página.
 
-Recargar la página del mapa y se deben ver los carriles bici y las estaciones en el mapa.
+Recargar la página del mapa para ver los carriles bici y las estaciones en el mapa.
 
 ![Estilo carril bici + estaciones](img/bcn_carril_estaciones.png)
 Estilo carril bici + estaciones
@@ -114,11 +114,11 @@ En la propiedad *Text field* en lugar de seleccionar un atributo de la capa escr
 
 En la propiedad *Color* seleccionar un amarillo (#f3ca16)
 
-En la propiedad *Size* seleccionar la opción **Style across zoom range**. Se muestra una ventana con 2 opciones de estilo una para el valor mínimo del zoom del mapa y otra para el máximo. Para primera opción cambiamos el valor de zoom a 11 y el *Text size* a 5px. Para la segunda opción *Zoom 22* cambiar el *Text size* a 22px. Presionar el botón de *Done*. Si hacemos zoom en el mapa vemos que el tamaño de la letra varía según el nivel de zoom. Mientras más nos acercamos más grande es la letra.
+En la propiedad *Size* seleccionar la opción **Style across zoom range**. Se muestra una ventana con 2 opciones de estilo; una para el valor mínimo del zoom del mapa y otra para el máximo. En la primera opción cambiamos el valor de zoom a 11 y el *Text size* a 5px. Para la segunda opción *Zoom 22* cambiar el *Text size* a 22px. Presionar el botón de *Done*. Si hacemos zoom en el mapa vemos que el tamaño de la letra varía según el nivel de zoom. Mientras más nos acercamos más grande es la letra.
 
 Presionamos el botón **Publish** para publicar los cambios. Vemos que la URL del estilo se mantiene, así que no tenemos que modificar nada en nuestra página.
 
-Recargar la página del mapa y se deben ver los carriles bici, las estaciones en el mapa y los puntos de anclaje.
+Recargar la página del mapa para ver los carriles bici, las estaciones en el mapa y los puntos de anclaje.
 
 ![Estilo carril bici + estaciones + anclajes](img/bcn_total.png)
 Estilo carril bici + estaciones + anclajes

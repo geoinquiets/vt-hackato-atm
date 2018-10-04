@@ -6,17 +6,17 @@ Visitar la página <https://www.mapbox.com/signup/> y crear una cuenta gratuita.
 
 ## Subir GeoJSON a Mapbox
 
-Hacer login en la cuenta de Mapbox y seleccionar primero la opción de **Studio** y luego la pestaña de **Datasets**, también se puede ir directamente desde <https://www.mapbox.com/studio/datasets/>.
+Hacer login en la cuenta de Mapbox y seleccionar primero la opción de **Studio** y luego la pestaña de **Datasets** ó también se puede ir directamente desde <https://www.mapbox.com/studio/datasets/>.
 
-El apartado de Datasets es donde se pueden subir los datos o crear un conjunto de datos desde cero.
+En el apartado de Datasets es donde se pueden subir los datos o crear un conjunto de datos desde cero.
 
 Para subir un cojunto de datos presionar el botón de **New dataset**. Seleccionar la pestaña de **Upload** en la ventana que se despliega y arrastrar o seleccionar el archivo que se desea subir.
 
-Los formatos de archivos soportados son GeoJSON, JSON y CSV.
+Los formatos de archivos soportados son: GeoJSON, JSON y CSV.
 
 En la carpeta *downloads* encontrar algunos archivos en formato GeoJSON. Subir los archivos *08019_carril_bici*, *08019_punts_ancoratge_bicicletes* y *08019_stations*. Al subir los archivos renombrarlos a *carril_bici*, *punts_ancoratge_bicicletes* y *stations* respectivamente.
 
-Para poder dar estilo y utilizar los datos primero hay que convertilos en un **Tileset**. Para convertirlo presionar el botón de **Menu** y seleccionar la opción de **Export to tileset**. En la ventana que se despliega seleccioanr la opcíon de *Export to a new tileset* y presionar el botón de **Export**.
+Para poder dar estilo y utilizar los datos primero hay que convertilos en un **Tileset**. Para ello presionar el botón de **Menu** y seleccionar la opción de **Export to tileset**. En la ventana que se despliega seleccionar la opción de *Export to a new tileset* y presionar el botón de **Export**.
 
 ## Visualizar los datos en el visor
 
@@ -87,7 +87,7 @@ Para obtener el Map ID del tileset seleccionar la pestaña **Tilesets** y presio
 
 Remplazar donde dice *MAP ID DEL TILESET* por el id copiado. Ejemplo de identificador *mapbox://bolollo.cjmtjlsp30e2232lk64u3a3zm-5dzl6*
 
-Recargar la página del mapa y se deben ver los puntos de las estaciones de Bicing en el mapa.
+Recargar la página del mapa para ver los puntos de las estaciones de Bicing en el mapa.
 
 ![Resultado visor con estaciones de Bicing](img/visor_estaciones.png)
 Resultado visor con estaciones de Bicing
