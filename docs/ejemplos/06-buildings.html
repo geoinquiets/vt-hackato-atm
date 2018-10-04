@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapa VT</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://mapbox-gl-inspect.lukasmartinelli.ch/dist/mapbox-gl-inspect.css' rel='stylesheet' />
+    <script src='https://mapbox-gl-inspect.lukasmartinelli.ch/dist/mapbox-gl-inspect.min.js'></script>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+<body id='map'>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYm9sb2xsbyIsImEiOiI3MDlqRnJJIn0.m-zCTI_UaEOCiCakGUDwcw';
+    var map = new mapboxgl.Map({
+        container: 'map', // id del elemento HTML que contendrá el mapa
+        style: 'mapbox://styles/mapbox/dark-v9', // Ubicación del estilo
+        center: [2.194525, 41.386616], // Ubicación inicial
+        zoom: 16, // Zoom inicial
+        bearing: -45, // Ángulo de rotación inicial
+        pitch: 60,
+        hash: true // Permite ir guardando la posición del mapa en la URL
+    });
+    // Agrega controles de navegación (zoom, rotación) al mapa:
+    map.addControl(new mapboxgl.NavigationControl());
+    // Agregar el control de inspección
+    map.addControl(new MapboxInspect());
+
+    map.on('load', function () {
+        map.addSource("buildings", {
+            "type": "vector",
+            "url": "http://tileserver.fonts.cat/data/buildingpart.json"
+        });
+
+        map.addLayer({
+            "id": "buildings",
+            "source": "buildings",
+            "source-layer": "buildingpart",
+            "type": "fill-extrusion",
+            "paint": {
+                "fill-extrusion-opacity": 0.75,
+                "fill-extrusion-color": "#808080",
+                "fill-extrusion-height": ["*", 3, ["get", "floors"]]
+            }
+        });
+    });
+</script>
+</body>
+</html>

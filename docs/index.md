@@ -1,6 +1,7 @@
 # Teselas vectoriales para hackató ATM
 
-Bienvenidos al taller de teselas vectoriales. Este manual está publicado aquí:
+Bienvenidos al taller de teselas vectoriales y Mapbox GL.
+Estos apuntes están publicados aquí:
 
 # https://geoinquiets.github.io/vt-hackato-atm/
 
@@ -21,27 +22,16 @@ Y ambos somos [geoinquiets](http://geoinquiets.cat)!
     * Adaptar — remezclar, transformar y crear a partir del material para cualquier finalidad, incluso comercial.
 
     Bajo las condiciones siguientes:
+
     * Reconocimiento — Debe reconocer adecuadamente la autoría, proporcionar un enlace a la licencia e indicar si se han realizado cambios. Puede hacerlo de cualquier manera razonable, pero no de una manera que sugiera que tiene el apoyo del licenciador o lo recibe por el uso que hace.
+    
     * CompartirIgual — Si remezcla, transforma o crea a partir del material, deberá difundir sus contribuciones bajo la misma licencia que el original.
+    
     * No hay restricciones adicionales — No puede aplicar términos legales o medidas tecnológicas que legalmente restrinjan realizar aquello que la licencia permite.
 
 !!! danger
-    Todo el taller se basa en tener un navegador con capacidades WebGL, que debería
-     poder moverse RÁPIDO.
+    Requisito imprescindible es tener un navegador con capacidades WebGL.
 
-    1. Comprobar que al abrirse esta página, se ve un mapa de Barcelona con edificios:
-    http://tileserver.fonts.cat/styles/dark-matter-3d/?vector#16.09/41.3861/2.19226/-47.2/60
-    2. Comprobar que el mapa se mueve con soltura.
+## Versión ampliada
 
-## Recursos adicionales
-
-Mayormente de [Raf](https://twitter.com/fakeraf), nuestra fuente diaria de vitaminas, vía [Geoinquiets](https://twitter.com/geoinquiets). 
-
-* [Awesome Vector Tiles](https://github.com/mapbox/awesome-vector-tiles) 
-* [Natural Earth Vector Tiles by Lukas Martinelli](https://github.com/lukasmartinelli/naturalearthtiles)
-* [Tutorial de los Geoinquietos de Londres](https://geovation.github.io/build-your-own-static-vector-tile-pipeline)
-* [Tilemaker, de OSM a mbtiles de una tacada](https://github.com/systemed/tilemaker)
-* [Qué son las teselas vectoriales (vector tiles) y cómo generarlos con PostGIS / GeoServer](https://mappinggis.com/2017/09/que-son-los-vector-tiles-y-como-generarlos-con-geoserver/)
-* [Natural Earth Quickstart Style implemented with Tegola](http://www.gretchenpeterson.com/blog/archives/4901)
-* [GeoServer MBStyle Cookbook](http://docs.geoserver.org/stable/en/user/styling/mbstyle/cookbook/index.html)
-* [GeoServer MBStyle Styling Workbook](http://docs.geoserver.org/stable/en/user/styling/workshop/mbstyle/index.html)
+Versión completa del taller, de 4 horas, donde se detalla cómo crear y servir teselas vectoriales en nuestros propios servidores, sin depender de una cuenta de Mapbox: https://geoinquiets.github.io/taller-vt/
