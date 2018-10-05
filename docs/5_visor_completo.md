@@ -1,6 +1,6 @@
-# Cómo consumirlas (mapbox gl js)
+# Visualización e interacción (mapbox gl js)
 
-## ¿Y sin teselas? Cargar datos directamente en GeoJSON
+## ¿Y sin teselas? Carga de datos directamente en GeoJSON
 
 ![Metro](img/metro.png)
 

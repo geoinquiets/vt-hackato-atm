@@ -1,4 +1,4 @@
-# Cómo publicar datos en un formato geojson a teselas vectoriales (mapbox online)
+# Cómo servirlas (mapbox online)
 
 ## Crear cuenta en Mapbox
 

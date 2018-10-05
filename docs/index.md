@@ -31,7 +31,3 @@ Y ambos somos [geoinquiets](http://geoinquiets.cat)!
 
 !!! danger
     Requisito imprescindible es tener un navegador con capacidades WebGL.
-
-## Versión ampliada
-
-Versión completa del taller, de 4 horas, donde se detalla cómo crear y servir teselas vectoriales en nuestros propios servidores, sin depender de una cuenta de Mapbox: https://geoinquiets.github.io/taller-vt/

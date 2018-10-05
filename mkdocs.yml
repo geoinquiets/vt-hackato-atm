@@ -1,4 +1,4 @@
-site_name: Teselas vectoriales para hackató ATM
+site_name: Teselas vectoriales (versión compacta hackatón)
 theme:
   name: 'material'
   language: 'es'
@@ -12,8 +12,8 @@ repo_url: "https://github.com/geoinquiets/vt-hackato-atm"
 pages:
 - Home: index.md
 - 1. Qué son: 1_teoria.md
-- 2. Cómo visualizarlas: 2_visor_simple.md
-- 3. Cómo publicar datos en un formato geojson a teselas vectoriales (mapbox online): 3_publicar.md
+- 2. Mi primer mapa: 2_visor_simple.md
+- 3. Cómo servirlas (mapbox online): 3_publicar.md
 - 4. Cómo simbolizarlas (mapbox studio): 4_estilos.md
-- 5. Cómo consumirlas (mapbox gl js): 5_visor_completo.md
-- 6. Donde está la documentacion y los ejemplos: 6_documentacion.md
+- 5. Visualización e interacción (mapbox gl js): 5_visor_completo.md
+- 6. Documentación y ejemplos: 6_documentacion.md
