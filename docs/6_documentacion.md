@@ -27,6 +27,13 @@
 ![06](img/buildings.png)
 
 
+## Iconos: SVG, PNG y sprites para Mapbox GL
+
+https://github.com/oscarfonts/TMB-Icons
+
+http://fonts.cat/TMB-Icons
+
+
 ## Versión ampliada del taller
 
 Versión completa del taller, de 4 horas, donde se entra mucho más en detalle en cómo crear y servir teselas vectoriales en nuestros propios servidores, sin depender de una cuenta de Mapbox: https://geoinquiets.github.io/taller-vt/
